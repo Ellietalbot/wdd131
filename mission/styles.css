@@ -37,3 +37,10 @@ img{
 footer{
     text-align: center;
 }
+.dark{
+    color: #FFFFFF;
+    background-color: #333;
+}
+.dark h2{
+    color:#A0D4ED;
+}

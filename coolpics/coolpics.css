@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: 'Mooli', sans-serif;
+}
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #52489c;
+  }
+  a:link,
+  a:visited {
+    color: var(--accent-color);
+  }
+img {
+    max-width: 100%;
+    width:250px;
+    height: 250px;
+    object-fit: cover;
+    border: white 10px solid;
+    box-shadow: 2px 2px 5px #333;
+}
+button {
+    display: none;
+    background: none;
+    border: none;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: underline;
+}
+li {
+    padding: 1rem;
+    
+}
+header{
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+h1{
+    font-family: var(--secondary-font);
+}
+main{
+    background-color: whitesmoke;
+    text-align: center;
+
+
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    max-width: fit-content;
+    margin: 0 auto;
+
+}
+footer {
+    background-color: #52489c;
+    color: white;
+    margin: 0 auto;
+}
+h2{
+    margin: 0 auto;
+    padding: 20px;
+}
+@media screen and (max-width: 700px){
+    button{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    menu{
+        flex-direction: column;
+    }
+    .gallery{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 1000px ) and (min-width: 700px){
+    button{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding:1rem;
+    }
+    menu{
+        display: none;
+    }
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+
+
+}

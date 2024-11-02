@@ -1,0 +1,43 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form_demo.css" />
+    <script src="form_demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html">
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <label for="pmethod">Payment Method:</label>
+        <select name ="pmethod" id = "pmethod">
+            <option>Select Payment Method</option>
+            <option value = "creditCard">Credit Card</option>
+            <option value = "paypal">Paypal</option>
+        </select>
+        <section id = 'ccnum_container' class="hide">
+            <label for="ccnum">Credit Card Number</label>
+            <input type="text" id="ccnum" name="ccnum" pattern="[0-9]{16}" placeholder = "Enter 16 Digits">
+        </section>
+
+        <section id ='ppusername_container' class="hide">
+
+        <label for="ppusername">PayPal Username:</label>
+        <input type="text" id="ppusername" name="ppusername" placeholder = "Enter PayPal Username">
+
+        </section>
+
+        <button>Place Order</button>
+    </main>
+  </body>
+</html>

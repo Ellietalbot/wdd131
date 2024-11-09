@@ -16,36 +16,29 @@ addButton.addEventListener('click', function() {
 });
 
 
-
-// Form submit handler
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); 
 
-    const adult_name = adult_name_input.value; // Get the adult name from the form
-    const fees = totalFees(); // Get the total fees
-
-    // Prepare the info object to pass to successTemplate
+    const adult_name = adult_name_input.value; 
+    const fees = totalFees(); 
     const info = {
         adult_name: adult_name,
         num_participants: count,
         fees: fees
     };
 
-    // Insert the success message into the summary section
     document.getElementById('summary').innerHTML = successTemplate(info);
-
-    // Hide the form and show the summary
     form.style.display = "none";
     document.getElementById('summary').style.display = "block";
 });
 
-// Calculate total fees
+
 function totalFees() {
-    let feeElements = document.querySelectorAll("[id^=fee]"); // Get all fee inputs
+    let feeElements = document.querySelectorAll("[id^=fee]"); 
     let total_fees = 0;
 
     feeElements.forEach(feeElement => {
-        total_fees += parseFloat(feeElement.value) || 0; // Add the fee or 0 if empty
+        total_fees += parseFloat(feeElement.value) || 0; 
     });
 
     return total_fees;

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shadows+Into+Light&display=swap');
+
+:root {
+  --primary-color: #1B98E0;
+  --secondary-color: #59c3c3;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+.shadows-into-light-regular {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  font-family: "Shadows Into Light";
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  margin: 3em 0 0;
+  padding: 0;
+}
+
+#title img {
+  width: 160px;
+  align-self: flex-start;
+}
+
+#title h1 {
+  font-size: 80px;
+  align-self: flex-end;
+}
+
+#search_bar_container {
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 3em 1em 1.5em;
+}
+
+#search_bar_container input {
+  border: none;
+  flex-grow: 1;
+  height: 50px;
+  background-color: transparent;
+  border-right: 3px solid black;
+}
+
+#search_bar_container input::placeholder {
+  font-size: 25px;
+}
+
+#search_bar_container button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+#search_bar_container button img {
+  width: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+hr {
+  margin: 0;
+  height: 3px;
+  background-color: lightgray;
+  border: none;
+}
+
+main {
+  margin: 2em;
+}
+
+#recipe {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#recipe img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#tag {
+  border: 3px solid black;
+  margin: 5px;
+}
+
+#tag p {
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+  margin: 0;
+}
+
+#recipe_info {
+  margin-bottom: 1.5em;
+  justify-content: flex-start;
+}
+
+#recipe_info h1 {
+  font-family: "Shadows Into Light";
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+#recipe_info #description {
+  display: none;
+}
+
+.icon-star, .icon-star-empty {
+  font-size: 32px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.social a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social img {
+  width: 70px;
+  height: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  #recipe_info #description {
+    display: none; 
+  }
+
+  #recipe {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #recipe img {
+    max-width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  #recipe_info {
+    width: 100%;
+    text-align: center;
+  }
+
+  #recipe_info h1 {
+    font-size: 36px;
+  }
+
+  #recipe_info #description {
+    display: none;
+  }
+  #recipe_info #tag {
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #recipe {
+    max-width: 960px;
+    margin: 0 auto;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #recipe img {
+    max-width: 50%;
+    object-fit: cover;
+  }
+
+  #recipe_info {
+    flex: 2;
+    max-width: 60%;
+    box-sizing: border-box;
+  }
+
+  #recipe_info #tag {
+    max-width: 200px;
+  }
+
+  #recipe_info h1 {
+    font-size: 36px;
+  }
+
+  #recipe_info #description {
+    display: block;
+  }
+}
